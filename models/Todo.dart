@@ -1,0 +1,13 @@
+// ignore_for_file: file_names
+
+class Todo {
+  String text;
+  bool done;
+
+  Todo({required this.text, this.done = false});
+
+  factory Todo.fromJson(Map<String, dynamic> json) =>
+      Todo(text: json['text'], done: json['done']);
+
+  Map<String, dynamic> toJson() => {'text': text, 'done': done};
+}
